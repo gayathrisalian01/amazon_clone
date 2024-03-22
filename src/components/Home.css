@@ -5,6 +5,7 @@
     margin-right: auto;
     max-width: 1500px;
     flex-direction: column;
+    background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
   }
   .home__image {
     width: 100%; 
@@ -14,6 +15,7 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   outline: black;
+  font-size: 30px;
     background-color: rgba(0, 0, 0, 0.3);
     border: 1px solid black;
 }
@@ -21,19 +23,47 @@
 /* Optional: Adjust size of arrows */
 .carousel-control-prev,
 .carousel-control-next {
+  margin-top: -300px;
   width: 5%;
 }
 
 .textlinkstrip {
   background-color: rgb(242, 236, 236);
-  width: 90%;
+  width: 95%;
   height: 40px;
   text-align: center;
-  margin-top: -20%;
-  margin-left: 5%;
+  margin-top: -23%;
+  margin-bottom: 3%;
+  margin-left: 2%;
   z-index: 100;
  
 }
 .textlinkstrip p{
+  margin-top: 7px;
   padding: 25px auto;
+  font-size: 16px;
+}
+.carousel {
+  display: flex;
+  flex-direction: row; /* Display items horizontally */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+  width: 100%; /* Ensure the carousel takes up the full width */
+}
+
+.carousel img {
+  flex: 0 0 auto;
+  padding: 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  white-space: nowrap; /* Prevent items from wrapping */
+  height: 200px; /* Adjust height as needed */
+}
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Ensure items don't overflow horizontally */
 }
